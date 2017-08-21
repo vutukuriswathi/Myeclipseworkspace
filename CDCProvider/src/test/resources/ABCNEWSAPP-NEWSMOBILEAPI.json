@@ -1,0 +1,50 @@
+{
+    "provider": {
+        "name": "NEWSMOBILEAPI"
+    },
+    "consumer": {
+        "name": "ABCNEWSAPP"
+    },
+    "interactions": [
+        {
+            "providerState": "newsmobileapi sends a request to abcnewsapp",
+            "description": "validate the below data",
+            "request": {
+                "method": "GET",
+                "path": "/api/category/id/44",
+                "body": null
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "data": {
+                        "id": 44,
+                        "name": "Just In",
+                        "platform": "ALL",
+                        "type": "news"
+                    },
+                    "status": {
+                        "code": "200",
+                        "message": "OK"
+                    }
+                },
+                "matchingRules": {
+                    "$.body.data.name": {
+                        "match": "type"
+                    }
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "2.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.2.7"
+        }
+    }
+}

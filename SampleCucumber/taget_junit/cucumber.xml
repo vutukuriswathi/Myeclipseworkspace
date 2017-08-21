@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.067464">
+<testcase classname="w3cLinkCheker validation for channel page" name="Testcase" time="0.067464">
+<system-out><![CDATA[Given Launch the wcLinkChecker..............................................passed
+When entered page url.......................................................passed
+Then validator validates page errors........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

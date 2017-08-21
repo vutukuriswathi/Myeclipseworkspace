@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>CDCProvider</groupId>
+  <artifactId>CDCProvider</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CDCProvider</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+   
+    <plugins>
+     
+      
+      <plugin>
+    <groupId>au.com.dius</groupId>
+    <artifactId>pact-jvm-provider-maven_2.11</artifactId>
+    <version>3.2.8</version>
+    <configuration>
+      <serviceProviders>
+        <!-- You can define as many as you need, but each must have a unique name -->
+        <serviceProvider>
+          <name>NEWSMOBILEAPI</name>
+          
+          <!-- All the provider properties are optional, and have sensible defaults (shown below) -->
+          <protocol>http</protocol>
+          <host>mobileapi.abc-host.net.au</host>
+          <port>80</port>
+          
+          
+          
+          <consumers>
+            <!-- Again, you can define as many consumers for each provider as you need, but each must have a unique name -->
+            <consumer>
+              <name>ABCNEWSAPP</name>
+              <!--  currently supports a file path using pactFile or a URL using pactUrl -->
+              <pactFile>src/test/resources/ABCNEWSAPP-NEWSMOBILEAPI.json</pactFile>
+            </consumer>
+          </consumers>
+        </serviceProvider>
+      </serviceProviders>
+    </configuration>
+</plugin>
+     
+    </plugins>
+   
+  </build>
+</project>

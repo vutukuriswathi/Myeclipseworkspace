@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>AppiumFrameworkCode</groupId>
+  <artifactId>Frameworkcode</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>AppiumFrameworkCode</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <distributionManagement>
+   <snapshotRepository>
+      <id>nexusCredentials</id>
+      <url>https://nexus.abc-dev.net.au/nexus/content/repositories/mobileappssnapshots</url>
+   </snapshotRepository>
+</distributionManagement>
+
+   <profiles>
+        <!-- use this profile to run locally on android -->
+        <profile>
+            <id>localAndroid</id>
+              <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>        
+            <build>
+                <filters>
+                    <filter>configuration/localAndroid.properties</filter>
+                </filters>
+                <testResources>
+                    <testResource>
+                        <directory>src/test/resources</directory>
+                        <filtering>true</filtering>
+                    </testResource>
+                </testResources>
+            </build>
+        </profile>
+        
+         <!-- use this profile to run on aws android -->
+        <profile>
+            <id>awsAndroid</id>            
+            <build>
+                <filters>
+                    <filter>configuration/awsAndroid.properties</filter>
+                </filters>
+                <testResources>
+                    <testResource>
+                        <directory>src/test/resources</directory>
+                        <filtering>true</filtering>
+                    </testResource>
+                </testResources>
+            </build>
+        </profile>
+        
+         <!-- use this profile to run on aws android -->
+        <profile>
+            <id>localIos</id>            
+            <build>
+                <filters>
+                    <filter>configuration/localIos.properties</filter>
+                </filters>
+                <testResources>
+                    <testResource>
+                        <directory>src/test/resources</directory>
+                        <filtering>true</filtering>
+                    </testResource>
+                </testResources>
+            </build>
+        </profile>
+        
+          <!-- use this profile to run on aws android -->
+        <profile>
+            <id>awsIos</id>            
+            <build>
+                <filters>
+                    <filter>configuration/awsIos.properties</filter>
+                </filters>
+                <testResources>
+                    <testResource>
+                        <directory>src/test/resources</directory>
+                        <filtering>true</filtering>
+                    </testResource>
+                </testResources>
+            </build>
+        </profile>
+        
+        </profiles>
+        
+  <dependencies>          
+    <dependency>
+	<groupId>io.appium</groupId>
+	<artifactId>java-client</artifactId>
+	<version>3.3.0</version>
+</dependency>
+    
+  <dependency>
+  <groupId>org.testng</groupId>
+  <artifactId>testng</artifactId>
+  <version>6.9.10</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.14</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.14</version>
+</dependency>
+
+ 
+</dependencies>
+  <build> 
+  <plugins>  
+   <plugin>
+               <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin> 
+            
+            <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+        <configuration>
+         
+        </configuration>
+      </plugin>
+	
+			
+			</plugins>
+    </build>
+</project>

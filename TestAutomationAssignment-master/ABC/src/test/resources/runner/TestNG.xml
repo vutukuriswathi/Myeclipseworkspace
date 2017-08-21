@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="ABC News Test Assignment">
+
+	<test name="ABC News Test">
+		<classes>
+			<class name="testCases.TestABCNews" />
+		</classes>
+	</test>
+
+	<test name="ABC Radio Test">
+		<classes>
+			<class name="testCases.TestABCRadio" />
+		</classes>
+	</test>
+
+	<test name="ABC News API Integration Test">
+		<classes>
+			<class name="testCases.TestWebServices" />
+		</classes>
+	</test>
+
+</suite> 
+
+

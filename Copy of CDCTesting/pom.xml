@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>CDCTesting</groupId>
+  <artifactId>CDCTesting</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+ <!-- http://mvnrepository.com/artifact/au.com.dius/pact-jvm-consumer-junit_2.11 -->
+<dependency>
+    <groupId>au.com.dius</groupId>
+    <artifactId>pact-jvm-consumer-junit_2.11</artifactId>
+    <version>3.2.7</version>
+</dependency>
+ <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.2</version>
+</dependency>
+ <!-- http://mvnrepository.com/artifact/commons-collections/commons-collections -->
+<dependency>
+    <groupId>commons-collections</groupId>
+    <artifactId>commons-collections</artifactId>
+    <version>3.2.2</version>
+</dependency>
+ <!-- http://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.6.2</version>
+</dependency>
+ <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/fluent-hc -->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>fluent-hc</artifactId>
+    <version>4.5.2</version>
+</dependency>
+<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+			<scope>compile</scope>
+		</dependency>
+  </dependencies>
+</project>

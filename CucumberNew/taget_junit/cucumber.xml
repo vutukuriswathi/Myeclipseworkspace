@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.147051">
+<testcase classname="About Testers" name="I am a Manual Tester" time="0.145165">
+<system-out><![CDATA[Given I am a "Manual" Tester................................................passed
+When I apply for a job......................................................passed
+Then I got a "Less" paid job................................................passed
+And I am "Low" satisfied with my salary.....................................passed
+But My parents are "Average" satisfied......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="About Testers" name="I am a Manual Tester 2" time="0.000906">
+<system-out><![CDATA[Given I am a "Automation" Tester............................................passed
+When I apply for a job......................................................passed
+Then I got a "High" paid job................................................passed
+And I am "Very" satisfied with my salary....................................passed
+But My parents are "Highly" satisfied.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="About Testers" name="I am a Manual Tester 3" time="0.00098">
+<system-out><![CDATA[Given I am a "Database" Tester..............................................passed
+When I apply for a job......................................................passed
+Then I got a "Good" paid job................................................passed
+And I am "Better" satisfied with my salary..................................passed
+But My parents are "Better" satisfied.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

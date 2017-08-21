@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a13d7641-8c56-4b91-9b57-7e0ca53c9b59" activeEnvironment="Default" name="API_Framework" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="Count Empty Values">true</con:setting><con:setting id="Excluded elements">&lt;xml-fragment/></con:setting><con:setting id="Multi values">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="true"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="true"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="true"/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Open Report" value="true"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value="/Users/chawlag2g/Documents/GAGAN/WORKSPACE/SOAPUI_Framework/Results"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value="TestSuite Report"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="ae3064e0-abb1-47ad-8234-bf47216627b0" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://mobile-api.abc.net.au" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>${Endpoint}</con:endpoint></con:endpoints><con:resource name="Weather" path="/weather/request.php?" id="d51e7bb3-9cd0-4665-9f2b-4f7f6fa9c38e"><con:settings/><con:parameters><con:parameter><con:name>request</con:name><con:value>weatherv2</con:value><con:style>QUERY</con:style><con:default>weatherv2</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>weathertown</con:name><con:value>Nsw</con:value><con:style>QUERY</con:style><con:default>Nsw</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>suburb</con:name><con:value>haymarket</con:value><con:style>QUERY</con:style><con:default>haymarket</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Request.php" id="98d1ba38-d3a4-4022-914f-573027c67dde" method="GET"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>407 503</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request_WeatherTown" id="6a1c06b3-005d-4cce-9432-e4ded15f4a7d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au//weather/request.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="suburb" value="Sydney"/>
+  <con:entry key="weathertown" value="nsw"/>
+</con:parameters><con:parameterOrder><con:entry>request</con:entry><con:entry>weathertown</con:entry><con:entry>suburb</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Category" path="/api/category" id="ba13ba1a-f3c8-4d1d-b520-193c39ed45ee"><con:settings/><con:parameters/><con:resource name="ID" path="id/{ID}" id="473aacb9-5ae8-4fa7-9922-d94c223f65ed"><con:settings/><con:parameters><con:parameter><con:name>ID</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Get" id="a0d945a3-08ad-4948-b40a-d9e2f365a262" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/category/id/1">ns:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/category/id/1">ns:Response</con:element></con:representation><con:request name="Request_Cat_ID" id="01bb8a39-b8d9-453c-a7da-67da32dc1f54" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/id/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#Project#Current_ID}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Location" path="id/3/suburb/{suburb}/state/{state}" id="93dbcf9f-d658-4a5e-82f2-566d5756c07a"><con:settings/><con:parameters><con:parameter><con:name>suburb</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>state</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Get" id="cc59d1c2-5986-4801-bd26-b308e8fe2310" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:nsw="http://mobile-api.abc.net.au/api/category/id/3/suburb/Sydney/state/NSW">nsw:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:nsw="http://mobile-api.abc.net.au/api/category/id/3/suburb/Sydney/state/NSW">nsw:Response</con:element></con:representation><con:request name="Request_LocalNews" id="1ea45b68-1d22-4050-be25-e3a3cdf40ee3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/id/3/suburb/Sydney/state/NSW</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="suburb" value="Canberra"/>
+  <con:entry key="state" value="ACT"/>
+</con:parameters><con:parameterOrder><con:entry>suburb</con:entry><con:entry>state</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Now_On_TV" path="location/{state}/id/{ID}" id="cfc16bf4-8347-444a-a873-e8a9b50d2c73"><con:settings/><con:parameters><con:parameter><con:name>state</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>ID</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Get" id="316afb5c-3865-448e-bb40-ae471fa31442" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/category/location/NSW/id/17">ns:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/category/location/NSW/id/17">ns:Response</con:element></con:representation><con:request name="Request_NowOnTV" id="a049b1bf-1269-4410-8247-02d86da080d9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/location/NSW/id/17</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="ID" value="17"/>
+  <con:entry key="state" value="NSW"/>
+</con:parameters><con:parameterOrder><con:entry>state</con:entry><con:entry>ID</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:method name="Get_All" id="6ac1268f-51ec-4ba3-8917-4d226dc8a994" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://mobile-api.abc.net.au/api/category">cat:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://mobile-api.abc.net.au/api/category">cat:Response</con:element></con:representation><con:request name="Request_Cat_All" id="2f458b7f-746f-460a-b8bf-851a153c6049" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="Wakeup" path="/api/Wakeup/" id="63b1e59a-cc0e-46b5-99f7-45659112a9fc"><con:settings/><con:parameters/><con:method name="Wakeup" id="158ba220-f2af-4132-8a41-7bc77601b0d3" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:wak="http://mobile-api.abc.net.au/api/Wakeup/">wak:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:wak="http://mobile-api.abc.net.au/api/Wakeup/">wak:Response</con:element></con:representation><con:request name="Request_WakeUp" id="2277e80e-73f6-4105-b04c-6e50f56b60bb" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/Wakeup/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="Weather_LatLong" path="/weather/request.php" id="e74cf059-ddc7-43da-af3a-8fee344b7965"><con:settings/><con:parameters><con:parameter><con:name>request</con:name><con:value>weatherlatlong</con:value><con:style>QUERY</con:style><con:default>weatherlatlong</con:default></con:parameter><con:parameter><con:name>lat</con:name><con:value>-3300000000.892099999999999999</con:value><con:style>QUERY</con:style><con:default>-3300000000.892099999999999999</con:default></con:parameter><con:parameter><con:name>long</con:name><con:value>151.204534555555555</con:value><con:style>QUERY</con:style><con:default>151.204534555555555</con:default></con:parameter></con:parameters><con:method name="Get" id="277ca2b4-be09-49b2-988f-9e463431e523" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500 404</con:status><con:params/><con:element xmlns:req="http://mobile-api.abc.net.au/weather/request.php">req:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:req="http://mobile-api.abc.net.au/weather/request.php">req:Fault</con:element></con:representation><con:request name="Request_Lat_Long" id="ff16b095-6757-4606-9ee3-8cf14a080a67" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/weather/request.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Article_ID" path="/api/article/id/{ID}" id="20c10ed0-5138-4db6-9866-0dc865c0cb69"><con:settings/><con:parameters><con:parameter><con:name>ID</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Get" id="f9903d16-73e1-4c3d-890d-ccac3efb6aa2" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/article/id/4065072">ns:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://mobile-api.abc.net.au/api/article/id/4065072">ns:Response</con:element></con:representation><con:request name="Request_Article" id="d54c74a4-4147-40d3-8ead-8bbd500da71a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://mobile-api.abc.net.au</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/article/id/4065072</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="4065072" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="d1b1ba5d-3f69-4419-8fb0-ab286cfbb4fd" name="TS_Weather"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="9ee91192-56b1-438f-9c4b-df16cfcbfc1a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Weather_Town" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_WeatherTown" id="c17bd82f-413f-45fc-aa06-19a27ac9f724"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/weather/request.php?" methodName="Request.php" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_WeatherTown" id="6a1c06b3-005d-4cce-9432-e4ded15f4a7d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au//weather/request.php</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e9295215-1c5b-478b-bb64-c27d6170c45e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="41a80598-18b6-4138-bcd9-f0d32763d149" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+def responseHeader = messageExchange.responseHeaders
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+log.info context.expand( '${#Project#Current_Weathertown}' )
+log.info context.expand( '${#Project#Current_suburb}' )
+
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+
+// Assert content
+assert json.region !=null
+assert json.title !=null
+assert json.min !=null
+assert json.max !=null
+assert json.body !=null
+assert json.suburb !=null
+assert json.state !=null
+//assert on suburb
+assert json.suburb[0].toString().toLowerCase() == (context.expand( '${#Project#Current_suburb}' )).toString().toLowerCase()
+assert json.suburb[1].toString().toLowerCase() == (context.expand( '${#Project#Current_suburb}' )).toString().toLowerCase()
+
+
+</scriptText></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c02e04e6-88b7-4399-8635-85f100b7d615" name="JsonPath Match"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="suburb" value="${#Project#Current_suburb}"/>
+  <con:entry key="weathertown" value="${#Project#Current_Weathertown}"/>
+</con:parameters><con:parameterOrder><con:entry>request</con:entry><con:entry>weathertown</con:entry><con:entry>suburb</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Save_Weather_Data" id="7e1d609a-a974-47ef-bba3-ad2fa960c4b1" disabled="true"><con:settings/><con:config><script>import com.SoapUI_GAGAN.property.*
+import groovy.json.JsonSlurper 
+
+def TestStep1 = "Rq_WeatherTown"
+def projectPath =context.expand( testRunner.testCase.testSuite.project.resourceRoot)
+def path = "//Users//chawlag2g//Documents//GAGAN//WORKSPACE//SOAPUI_Framework//Temp//";
+def response = testRunner.testCase.testSteps["$TestStep1"].testRequest.response.responseContent
+
+
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+log.info "Count: "+ json.count
+
+// log.info json.data.id
+// casting into String Array
+
+String[] WeatherTown = json
+//log.info json.data.articles.id
+log.info "$WeatherTown"
+file = new PropertyReading("$path")
+//def result = context.expand( '${Init#result}' )
+file.writeFile(path,WeatherTown, "$WeatherTown" )
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>deb16940-d68a-46d7-b2a8-f7a0404ea548</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>7e1d609a-a974-47ef-bba3-ad2fa960c4b1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>b6930294-1998-45a5-a668-ac84ce8a2db5</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="86839188-103d-4ace-90c4-f0d88d6fc240" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Lat_Long_OutsideAUS" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_LatLong" id="8df46b51-122d-474e-a48f-02e2f9d21b4f"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/weather/request.php" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_LatLong" id="ff16b095-6757-4606-9ee3-8cf14a080a67" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/weather/request.php</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="b461189b-9d97-4d0c-b075-e5fa76ce3fa7" name="Valid HTTP Status Codes"><con:configuration><codes>404</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="long" value="77.216721"/>
+  <con:entry key="lat" value="28.644800"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="TEMP" id="9c38a4e9-3ec8-4d6b-bd89-4d05a08b64bc" disabled="true"><con:settings/><con:config><script>// THIS SCRIPT FORMATS DATE FOR FOLDER
+
+
+import java.text.SimpleDateFormat  
+
+def today = new Date()
+
+def sdf = new SimpleDateFormat("ddMMyyyy_hhmmss")
+def folder = sdf.format(today) 
+
+log.info folder
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>3da0185a-197d-47d4-a0a1-a78da8206996</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="0577b561-2ecc-4d73-b256-ebc2cc085c42" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Lat_Long_withInAUS" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_LatLong" id="ea1f0734-820e-4f85-934f-8f796a2e8b66"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/weather/request.php" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_LatLong" id="ff16b095-6757-4606-9ee3-8cf14a080a67" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/weather/request.php</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="b461189b-9d97-4d0c-b075-e5fa76ce3fa7" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="a43f2c46-633f-4fc6-822c-903a3d9add92" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+def responseHeader = messageExchange.responseHeaders
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+log.info context.expand( '${#Project#Current_Weathertown}' )
+log.info context.expand( '${#Project#Current_suburb}' )
+
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+
+// Assert content
+assert json.region !=null
+assert json.title !=null
+assert json.min !=null
+assert json.max !=null
+assert json.body !=null
+assert json.suburb !=null
+assert json.state !=null
+//assert on suburb
+//assert json.suburb[0].toString().toLowerCase() == (context.expand( '${#Project#Current_suburb}' )).toString().toLowerCase()
+//assert json.suburb[1].toString().toLowerCase() == (context.expand( '${#Project#Current_suburb}' )).toString().toLowerCase()
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="long" value="151.209900"/>
+  <con:entry key="lat" value="-33.865143"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="TEMP" id="42169af5-96da-4186-9490-7326cdf54cbe"><con:settings/><con:config><script>// THIS SCRIPT FORMATS DATE FOR FOLDER
+
+
+import java.text.SimpleDateFormat  
+
+def today = new Date()
+
+def sdf = new SimpleDateFormat("ddMMyyyy_hhmmss")
+def folder = sdf.format(today) 
+
+log.info folder
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>3da0185a-197d-47d4-a0a1-a78da8206996</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="f6b8175f-1935-44c7-aeea-8fffe0d37577" name="TS_WakeUp" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="574ea97c-8aed-4dc9-b677-45d7018d1bb2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_WakeUp" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_WakeUp" id="feb5e38f-95a2-4059-98cf-3f3adef14806"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/Wakeup/" methodName="Wakeup" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_WakeUp" id="2277e80e-73f6-4105-b04c-6e50f56b60bb" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/Wakeup/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d654f608-1e30-4dcd-a0b4-9c696dd9cfa2" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="de883ff0-34c9-4011-aa1d-675fce766140" name="Match content of [title]"><con:configuration><path>$.data[0].podcast_feed_id</path><content>487661</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e7f3df5c-8c50-4934-a5e0-0af71f9d4c00" name="Match content of [mediatype]"><con:configuration><path>$.data[0].mediatype</path><content>video/mp4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="16b9374b-dc62-4420-998e-f31b2a4b2fd1" name="Script Assertion" disabled="true"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+def response = context.expand( '${Rq_WakeUp#Response#$.data[0].type}' )
+		
+//$.data[0].mediatype
+
+
+def slurper = new JsonSlurper()
+def json = slurper.parseText context.expand( '${Rq_WakeUp#Response}')
+log.info json.data.size()
+
+
+if (response!=null)
+{
+	log.info response
+	}
+	else
+	{
+		log.info "ELSE : "+response
+		}
+
+
+</scriptText></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e1a4c18a-d357-4808-96ae-66aa63bb6cae" name="Match content of [Group]"><con:configuration><path>$.data[0].group</path><content>Tv On Demand</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="7bd8cdf2-21e4-4518-b530-2d82e7999b7e" name="Match content of [title]"><con:configuration><path>$.data[0].title</path><content>News in 90 Seconds</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="0fc1215b-428b-4c6a-a287-fa3dc1153e47" name="Match content of [podcast_feed_name]"><con:configuration><path>$.data[1].podcast_feed_name</path><content>Weather in 90 Seconds</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="492fde6d-c5dc-4e4b-9c9e-fc09fb3e4369" name="Match content of [title]"><con:configuration><path>$.data[1].title</path><content>Weather in 90 seconds</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="8f34ff5d-4f11-4cc2-921e-034ac16f6fe3" name="Check for existence of [url]"><con:configuration><path>$.data[0].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="be9c5282-4e5e-4a31-a695-206a3b0de4c7" name="Check for existence of [url]"><con:configuration><path>$.data[1].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="88f2ccfb-568a-48d0-8e04-968e2ab383a2" name="Match content of [group]"><con:configuration><path>$.data[1].group</path><content>Tv On Demand</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="0e305f8c-b79a-4ead-b739-643a73240d6e" name="Match content of [podcast_feed_name]"><con:configuration><path>$.data[2].podcast_feed_name</path><content>Sport in 90 Seconds</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="33817a51-1efd-46e1-beb4-571856131692" name="Check for existence of [url]"><con:configuration><path>$.data[2].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="f70bcb47-b51b-40a9-a624-41d0522763ec" name="Check for existence of [url]"><con:configuration><path>$.data[3].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="13745dad-27e9-4e1d-87ac-1e176ab9466c" name="Match content of [title]"><con:configuration><path>$.data[3].title</path><content>Business in 90 Seconds</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e7a98384-ecac-4f68-b601-4c3ad7b87f92" name="Match content of [url]"><con:configuration><path>$.data[4].url</path><content>http://iphonestreaming.abc.net.au/news24/news24.m3u8</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="5f0f803d-789d-4dd4-8c63-2439f24ff1e3" name="Match content of [title]"><con:configuration><path>$.data[4].title</path><content>ABC NEWS 24</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e7e61579-25f8-4f9c-b01c-83fbf1308502" name="Match content of [group]"><con:configuration><path>$.data[4].group</path><content>Now On</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="db7dc458-cb65-47d9-b8e5-4095f7df80a3" name="Check for existence of [url]"><con:configuration><path>$.data[9].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="4ade4c6b-eb9e-470a-a75b-51b717c76147" name="Check for existence of [url]"><con:configuration><path>$.data[10].url</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="42ec717c-f85f-4e81-af7c-cc3a7366f141"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="temp" id="be5a25be-4b67-46ea-9112-61886a401809" disabled="true"><con:settings/><con:config><script>import groovy.json.JsonSlurper 
+
+
+def slurper = new JsonSlurper()
+def json = slurper.parseText context.expand( '${Rq_WakeUp#Response}')
+def temp= json.data
+log.info temp
+log.info json.data.size()
+log.info json.data[0].id
+def rowcount = json.data.size()
+String[] CategoryId_List = new String[rowcount]
+def i=0
+log.info "------------------------"
+def bb
+temp.each 
+{
+//	CategoryId_List=json.data[i].id
+//bb = "Rq_WakeUp#Response#$.data["+i.toString()+"].id"
+//log.info bb
+//log.info json.data[i].id
+
+	CategoryId_List[i] = json.data[i].id
+	log.info "--> $CategoryId_List"
+	i++
+	}
+	log.info "------------------------"
+log.info "$CategoryId_List"
+//def response = context.expand( '${Rq_WakeUp#Response#$.data[0].id}' )
+</script></con:config></con:testStep><con:testStep type="groovy" name="Analyse_Results" id="dd19d42a-aa96-4a35-9ec8-909bf990e965"><con:settings/><con:config><script>import groovy.json.JsonSlurper 
+
+def TestStep1 = "Rq_WakeUp"
+def response = testRunner.testCase.testSteps["$TestStep1"].testRequest.response.responseContent
+
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+log.info json.data.podcast_feed_name
+log.info json.data.mediatype
+	
+json.data.podcast_feed_name.each { log.info it }
+json.data.mediatype.each { log.info it }</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="cb574de3-a0c9-4f14-9130-8f62d49c5f95" name="TS_Category"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="9bf90c54-0a3d-4af1-99cc-39dc2f4f2763" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_CategoryAll" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_CategoryAll" id="c81ccf43-7e97-435d-b8fc-b7028b6aa20b"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/category" methodName="Get_All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_CategoryAll" id="2f458b7f-746f-460a-b8bf-851a153c6049" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6c08b074-11a1-49c0-83e0-730f23d55556" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="af5e23eb-d1cb-4b05-983f-59fa0e1579b3" name="Header_validation"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data
+log.info context.expand( '${ID}' )
+log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+
+//Assert Content
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="0555039e-3d6c-43f0-83a2-1529f549e6f5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Category_ID" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_Category_ID" id="683256b6-d54e-4bef-859d-30d31ef78f0e"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/category/id/{ID}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_Category_ID" id="01bb8a39-b8d9-453c-a7da-67da32dc1f54" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/id/1</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6506fb58-c875-48ee-836b-fc567387df04" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="70cc10e8-0029-4b9b-9e29-d360ff2ade02" name="Assert Header and Data"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data
+log.info context.expand( '${ID}' )
+log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+	
+// Assert Content 
+
+// Assert all the URLs
+// assert the image assets
+	imageURLs = json.data.images
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&amp;&amp; key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info "Status Code : " + huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+// assert the Each article image URLs
+	def articles = json.data.articles
+	log.info articles
+	
+	def i=0
+	articles.each 
+	{
+		imageURLs = json.data.articles[i].media
+		log.info imageURLs
+		imageURLs.each
+		{
+			key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+			imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+			log.info key + ":" + imageURL
+			if (key!="caption="&amp;&amp; key!="copyright=")
+			{
+				if (imageURL != ""){// currently we are getting blank URL sometimes 
+				assert imageURL != null 
+				 	URL u = new URL(imageURL)
+				    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+				    	huc.setRequestMethod("HEAD")
+				    	huc.connect()
+				    	log.info "Status Code : " + huc.getResponseCode()
+				    	assert huc.getResponseCode() == 200
+				}
+			}
+			
+		}
+		
+
+	assert articles[i].id !=null	
+	assert articles[i].date !=null
+	assert articles[i].title !=null
+	assert articles[i].short_description !=null
+	assert articles[i].web_url!=null
+	assert articles[i].tiny_web_url!=null
+	i++
+	}			
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#Project#id}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>id</con:name><con:value/></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>12dafe72-1e6b-4b8b-8fdf-b4163d48cf70</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>b6e598b4-a742-4d0b-8452-b97d5aabb656</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="94fabcbe-6389-4a2d-b189-e194f9203716" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Category_Local" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Init" id="461c53f9-60e8-465a-ad6f-a4e25fc53d31"><con:settings/><con:config><script>//import com.SoapUI_GAGAN.property.Xls_Reader
+
+def projectPath =context.expand( testRunner.testCase.testSuite.project.resourceRoot)
+def path = "$projectPath"+ "/Temp/"
+
+
+
+/*
+
+//log.info String.format("%",3.0)
+log.info context.xls.getCellData("Category_List", "ID",context.counter)
+temp= context.xls.getCellData("Category_List", "ID",context.counter)
+log.info temp.substring(0,temp.indexOf("."))
+
+*/
+	//=========== Real script
+
+	//def ID =44
+
+// Setting the Project level Property
+//	testRunner.testCase.testSuite.project.setPropertyValue( "Current_ID", "$ID" )
+//	context.result = testRunner.testCase.setPropertyValue( "ID", 44 )
+
+def executionFlag = context.expand( '${#TestSuite#Local}' )
+//def execute = context.local	
+log.info executionFlag
+
+if (executionFlag=="True")
+{
+	log.info " executionFlag for local : "+ executionFlag
+	
+} 
+else
+{
+	log.info " executionFlag for local : "+ executionFlag
+	
+	testRunner.cancel("Test Case Terminate")
+	}
+/*
+testRunner.testCase.testSteps.each{k, v ->  
+    if(k in ['step1', 'step2']) 
+        v.cancel()
+}
+*/</script></con:config></con:testStep><con:testStep type="restrequest" name="Rq_LocalNews" id="ba0d1fb5-45e1-4925-88d7-6e1b6c767d4d"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/category/id/3/suburb/{suburb}/state/{state}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_LocalNews" id="1ea45b68-1d22-4050-be25-e3a3cdf40ee3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/id/3/suburb/Sydney/state/NSW</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="075fc0c0-cc13-4a05-8819-4f90134e357b" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="6e8b50bd-4f49-44ba-9874-7c16dc0cc752" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data
+log.info context.expand( '${ID}' )
+log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+	
+// Assert Content 
+
+// Assert all the URLs
+// assert the image assets
+	imageURLs = json.data.images
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&amp;&amp; key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info "Status Code : " + huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+// assert the Each article image URLs
+	def articles = json.data.articles
+	log.info articles
+	
+	def i=0
+	articles.each 
+	{
+		imageURLs = json.data.articles[i].media
+		log.info imageURLs
+		imageURLs.each
+		{
+			key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+			imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+			log.info key + ":" + imageURL
+			if (key!="caption="&amp;&amp; key!="copyright=")
+			{
+				if (imageURL != ""){// currently we are getting blank URL sometimes 
+				assert imageURL != null 
+				 	URL u = new URL(imageURL)
+				    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+				    	huc.setRequestMethod("HEAD")
+				    	huc.connect()
+				    	log.info "Status Code : " + huc.getResponseCode()
+				    	assert huc.getResponseCode() == 200
+				}
+			}
+			
+		}	
+
+	assert articles[i].id !=null	
+	assert articles[i].date !=null
+	assert articles[i].title !=null
+	assert articles[i].short_description !=null
+	assert articles[i].web_url!=null
+	assert articles[i].tiny_web_url!=null
+	i++
+	}			
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="suburb" value="${#Project#Current_Weathertown}"/>
+  <con:entry key="state" value="${#Project#Current_State}"/>
+</con:parameters><con:parameterOrder><con:entry>suburb</con:entry><con:entry>state</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Data" id="2474e9b5-554c-4f64-b54e-419689da1ea0" disabled="true"><con:settings/><con:config><script>context.abc = 3
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>461c53f9-60e8-465a-ad6f-a4e25fc53d31</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>ca280e12-0496-4413-946e-4ab98cf07457</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="b439d4a1-891c-4fb6-a84c-3b1eda031012" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Now_On_TV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Init" id="3e8e46cb-1c08-4bdc-86ed-983ccbba8b37"><con:settings/><con:config><script>//import com.SoapUI_GAGAN.property.Xls_Reader
+
+def projectPath =context.expand( testRunner.testCase.testSuite.project.resourceRoot)
+def path = "//Users//chawlag2g//Documents//GAGAN//ABC_API_test//SOAPUI_WORKSPACE//Driver.xlsx" // NEVER USED
+
+context.result=19
+
+
+/*
+
+//log.info String.format("%",3.0)
+log.info context.xls.getCellData("Category_List", "ID",context.counter)
+temp= context.xls.getCellData("Category_List", "ID",context.counter)
+log.info temp.substring(0,temp.indexOf("."))
+
+*/
+	//=========== Real script
+
+	//def ID =44
+
+// Setting the Project level Property
+//	testRunner.testCase.testSuite.project.setPropertyValue( "Current_ID", "$ID" )
+//	context.result = testRunner.testCase.setPropertyValue( "ID", 44 )
+
+def execute = context.expand( '${#TestSuite#liveTV}' )
+//def execute = context.local	
+log.info execute
+
+if (execute!="True")
+{
+	testRunner.cancel("Test Case Terminate")
+}
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Rq_NowOnTV" id="9b4aa9bc-ac90-4388-9452-25a1f6ab0648"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/category/location/{state}/id/{ID}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_NowOnTV" id="a049b1bf-1269-4410-8247-02d86da080d9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/location/NSW/id/17</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6d81430d-13f5-4734-b437-50b3480ff999" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="41b58fc4-7423-4df9-b516-cf7769a67cf9" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data 
+log.info context.expand( '${ID}' )
+//log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+	
+// Assert Content 
+	assert json.data.id.toString() == (context.expand( '${ID}' )).toString()
+	assert json.data.priority != null
+// Assert all the URLs
+// assert the image assets
+
+	imageURLs = json.data.images
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&amp;&amp; key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info "Status Code : " + huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="ID" value="20"/>
+  <con:entry key="state" value="${#Project#Current_State}"/>
+</con:parameters><con:parameterOrder><con:entry>state</con:entry><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>ID</con:name><con:value>17</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>3e8e46cb-1c08-4bdc-86ed-983ccbba8b37</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>0bd84317-da25-4176-95b7-e547e26d5698</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="5ff74627-3cff-4da2-a46a-5d01b63d262a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Listen_Live" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Init" id="fd4b7dc2-63af-4628-84e5-efba55db6be5"><con:settings/><con:config><script>//import com.SoapUI_GAGAN.property.Xls_Reader
+
+def projectPath =context.expand( testRunner.testCase.testSuite.project.resourceRoot)
+def path = "//Users//chawlag2g//Documents//GAGAN//ABC_API_test//SOAPUI_WORKSPACE//Driver.xlsx" // NEVER USED
+
+
+
+/*
+
+//log.info String.format("%",3.0)
+log.info context.xls.getCellData("Category_List", "ID",context.counter)
+temp= context.xls.getCellData("Category_List", "ID",context.counter)
+log.info temp.substring(0,temp.indexOf("."))
+
+*/
+	//=========== Real script
+
+	//def ID =44
+
+// Setting the Project level Property
+//	testRunner.testCase.testSuite.project.setPropertyValue( "Current_ID", "$ID" )
+//	context.result = testRunner.testCase.setPropertyValue( "ID", 44 )
+
+def execute = context.expand( '${#TestSuite#liveTV}' )
+//def execute = context.local	
+log.info execute
+
+if (execute!="True")
+{
+	testRunner.cancel("Test Case Terminate")
+}
+/*
+testRunner.testCase.testSteps.each{k, v ->  
+    if(k in ['step1', 'step2']) 
+        v.cancel()
+}
+*/</script></con:config></con:testStep><con:testStep type="restrequest" name="Rq_Listen_Live" id="da6ada89-f2ee-43d1-8648-b115cebf6b83"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/category/location/{state}/id/{ID}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_Listen_Live" id="a049b1bf-1269-4410-8247-02d86da080d9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/category/location/NSW/id/17</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6d81430d-13f5-4734-b437-50b3480ff999" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="85748d79-2421-4879-9463-1cf78c403441" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data 
+log.info context.expand( '${ID}' )
+//log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+	
+// Assert Content 
+	assert json.data.id.toString() == (context.expand( '${ID}' )).toString()
+	assert json.data.priority != null
+// Assert all the URLs
+// assert the image assets
+
+	imageURLs = json.data.images
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&amp;&amp; key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info "Status Code : " + huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="state" value="${#Project#Current_State}"/>
+  <con:entry key="ID" value="19"/>
+</con:parameters><con:parameterOrder><con:entry>state</con:entry><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>ID</con:name><con:value>19</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>3e8e46cb-1c08-4bdc-86ed-983ccbba8b37</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>0bd84317-da25-4176-95b7-e547e26d5698</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties><con:property><con:name>Local</con:name><con:value>True</con:value></con:property><con:property><con:name>liveTV</con:name><con:value>True</con:value></con:property><con:property><con:name>Settings</con:name><con:value>True</con:value></con:property><con:property><con:name>More ABC</con:name><con:value>True</con:value></con:property><con:property><con:name>liveRadio</con:name><con:value>True</con:value></con:property><con:property><con:name>TOD</con:name><con:value>True</con:value></con:property><con:property><con:name>ROD</con:name><con:value>True</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:testSuite id="a8be7365-ad78-416b-8406-3577058c8b9b" name="TS_Article"><con:settings><con:setting id="IncludeOverview">true</con:setting><con:setting id="IncludeResults">true</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting><con:setting id="IncludeCoverage">true</con:setting></con:settings><con:runType>SEQUENTIAL</con:runType><con:testCase id="b1698119-e8b5-4f12-915d-133cdbc47b48" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_Article_Details" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Rq_Article_Details" id="cfdf49fb-c251-49ea-82d4-5cb9a3131843"><con:settings/><con:config service="http://mobile-api.abc.net.au" resourcePath="/api/article/id/{ID}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Rq_Article_Details" id="d54c74a4-4147-40d3-8ead-8bbd500da71a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://${#Project#HostName}</con:endpoint><con:request/><con:originalUri>http://mobile-api.abc.net.au/api/article/id/4065072</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ccc47b36-9f68-411e-9dc2-f5076b566e85" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="3c5d8652-33cc-4c07-97c8-5fd6fc60a705" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def responseHeader = messageExchange.responseHeaders // defining headers here
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+log.info json.data
+log.info context.expand( '${ID}' )
+log.info context.expand( '${#Project#Current_Article_ID}' )
+
+// Assert Headers 
+	
+	assert responseHeader["Content-Type"].toString() == "[application/json]"
+	log.info responseHeader["Content-Type"]
+	assert responseHeader["Content-Length"].toString() !=null
+	log.info responseHeader["Content-Length"]
+
+
+
+
+// Assert Content
+	//assert context.expand( '${#Project#Current_Article_ID}' ) == context.expand( '${ID}' )
+	
+	// Regular Expression Not working for some reason need to debug
+	
+	//def matcher = ( "20160321T050407+0000" =~ /(\d{8}T\d{6}+\d{4} )/) // "20160321T050407+0000") 
+	//assert matcher.matches()
+	
+	assert json.data.title !=null
+	assert json.data.short_description !=null
+	assert json.data.web_url!=null
+	assert json.data.tiny_web_url!=null
+
+// Assert all the URL's Response
+
+	imageURLs = json.data.media
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&amp;&amp; key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#Project#articleId}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>d6492811-ffaf-47b8-a6f4-ed0518d8d6d8</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>756e8fb8-7ae2-4419-9fa5-fccb94ded708</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>85437318-246c-45d4-9c6d-063eeea7dbbf</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="49a10419-eae8-40b0-9ad3-03213dac31c8" name="TS_CategoryAndArticle"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="5ec57ae1-0876-415f-81a4-f5b636e53736" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC_verifyCategoryAndArticleDetails" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="85317204-9810-4144-965b-230e5cdc549d"><con:settings/><con:config><script><![CDATA[import groovy.json.JsonSlurper
+//import groovy.json.JsonOutput
+
+
+project = testRunner.testCase.testSuite.project
+def slurper = new JsonSlurper()
+
+testSuite = project.getTestSuiteByName("TS_Category");
+testCase = testSuite.getTestCaseByName("TC_CategoryAll");
+
+// run test case
+runner = testCase.run(new com.eviware.soapui.support.types.StringToObjectMap(), false);
+
+def response =  project.testSuites["TS_Category"].testCases["TC_CategoryAll"].testSteps["Rq_CategoryAll"].testRequest.response.responseContent
+def json = slurper.parseText response
+
+//asserting the staus of json status for category all request
+assert json.status.code == "200"
+
+def rowcount=json.data.size() - 7
+
+// Declare the String array
+String[] CategoryId_List = new String[rowcount]
+
+def jsonData = json.data
+def i=0, j=0
+
+jsonData.each 
+{ 
+	id=json.data[i].id
+
+	assert id !=null
+
+
+switch ( id ) {
+	case "3": // local news 
+		
+	//	context.local = "True";
+		testRunner.testCase.testSuite.setPropertyValue( "Local", "True" )
+		j++
+		log.info "local news : $id";
+		break;
+		
+	case "17": // Now on TV
+		context.liveTV = "True"
+		testRunner.testCase.testSuite.setPropertyValue( "liveTV", "True" )
+		++j
+		log.info "Now on TV : $id"
+		break;
+		
+		
+	case "18"://TV on Demand
+		context.TOD = "True"
+		testRunner.testCase.testSuite.setPropertyValue( "TOD", "True" )
+		j++
+		log.info "TV on Demand : $id"
+		break;
+		
+		
+	case '19':// Listen Live
+		context.liveRadio = "True"
+		testRunner.testCase.testSuite.setPropertyValue( "liveRadio", "True" )
+		j++
+		log.info "Listen Live : $id"
+		break;
+	case 20:// Radio on Demand
+		context.ROD = "True"
+		testRunner.testCase.testSuite.setPropertyValue( "ROD", "True" )
+		j++
+		log.info "Radio on Demand : $id"
+		break;
+		
+	case 42:// More ABC
+		log.info "More ABC : $id"
+		testRunner.testCase.testSuite.setPropertyValue( "More ABC", "True" )
+		j++
+		break;
+		
+	case 43: // Settings
+		log.info "Settings : $id"
+		testRunner.testCase.testSuite.setPropertyValue( "Settings", "True" )
+		++j
+	break;
+	
+	default:
+		log.info "Value of ID : $id" + ", i = $i" +", j= $j" // VERY USEFUL FOR DEBUGGING
+		CategoryId_List[i-j]="$id"
+
+		// Assert that all valid URLs
+		imageURLs = json.data[i].images
+		imageURLs.each
+		{
+			imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+			log.info 	imageURL
+			assert imageURL != null
+		 	URL u = new URL(imageURL)
+		    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+		    	huc.setRequestMethod("HEAD")
+		    	huc.connect()
+		    	log.info huc.getResponseCode()
+		    	assert huc.getResponseCode() == 200
+		}
+
+}
+
+
+i++
+
+}
+log.info "categoryID List is"+ CategoryId_List
+
+testSuite = project.getTestSuiteByName("TS_Category");
+testCase = testSuite.getTestCaseByName("TC_Category_ID");
+
+//Reading the temp.txt file which contains category IDS
+def projectPath =context.expand( testRunner.testCase.testSuite.project.resourceRoot)
+//def path = "$projectPath"+ "/Temp/"
+//def category_IDS= new File("$path"+"temp.txt").getText()
+//String[] temp= category_IDS.split(',')
+//def tempSize = temp.size()
+//temp[0]=temp[0].substring(1)
+//String[] lastTempItem = temp[tempSize-1].split("]")
+//temp[tempSize-1] = lastTempItem[0]
+
+for(k=0;k<CategoryId_List.size();k++)
+{
+	
+
+//testRunner.testCase.testSuite.project.setPropertyValue("id", temp[k] )
+//log.info "property is"+testRunner.testCase.testSuite.project.getPropertyValue("id")
+
+
+//temp[k]=temp[k].trim()
+
+log.info "category ID  for which the request send is"+CategoryId_List[k]
+
+testRunner.testCase.testSuite.project.setPropertyValue("id", CategoryId_List[k] )
+
+// run test case
+runner = testCase.run(new com.eviware.soapui.support.types.StringToObjectMap(), false);
+
+response = project.testSuites["TS_Category"].testCases["TC_Category_ID"].testSteps["Rq_Category_ID"].testRequest.response.responseContent
+def responseHeader = project.testSuites["TS_Category"].testCases["TC_Category_ID"].testSteps["Rq_Category_ID"].testRequest.response.responseHeaders
+
+
+
+json = slurper.parseText response
+log.info json.data
+log.info json.status.code
+
+//checking the status of the category ID request
+assert json.status.code == "200"
+
+//checking the category ID request headers content type
+assert responseHeader["Content-Type"].toString() == "[application/json]"
+log.info responseHeader["Content-Type"]
+
+//checking the category ID content length
+assert responseHeader["Content-Length"].toString() !=null
+log.info responseHeader["Content-Length"]
+
+// Assert all the URLs
+// assert the image assets
+	imageURLs = json.data.images
+	def key
+	log.info imageURLs
+			imageURLs.each
+			{
+				key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+				imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+				log.info key + ":" + imageURL
+				if (key!="caption="&& key!="copyright=")
+				{
+					if (imageURL != ""){// currently we are getting blank URL sometimes 
+					assert imageURL != null 
+					 	URL u = new URL(imageURL)
+					    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+					    	huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info "Status Code : " + huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+				
+			}
+// assert the Each article image URLs
+	def articles = json.data.articles
+	log.info articles
+	
+	i=0
+	articles.each 
+	{
+		imageURLs = json.data.articles[i].media
+		log.info imageURLs
+		imageURLs.each
+		{
+			key = it.toString().substring(0,it.toString().lastIndexOf("=") + 1)
+			imageURL = it.toString().substring(it.toString().lastIndexOf("=") + 1)
+			log.info key + ":" + imageURL
+			if (key!="caption="&& key!="copyright=")
+			{
+				if (imageURL != ""){// currently we are getting blank URL sometimes 
+				assert imageURL != null 
+				 	URL u = new URL(imageURL)
+				    	HttpURLConnection huc =  (HttpURLConnection)  u.openConnection()
+				    	huc.setRequestMethod("HEAD")
+				    	huc.connect()
+				    	log.info "Status Code : " + huc.getResponseCode()
+				    	assert huc.getResponseCode() == 200
+				}
+			}
+			
+		}
+		
+
+	assert articles[i].id !=null	
+	assert articles[i].date !=null
+	assert articles[i].title !=null
+	assert articles[i].short_description !=null
+	assert articles[i].web_url!=null
+	assert articles[i].tiny_web_url!=null
+	i++
+	}
+
+
+
+
+//Getting the articles IDs of the corresponding category ID
+String[] articleId_List = json.data.articles.id
+
+for(j=0;j<articleId_List.size();j++)
+{
+	
+	//setting the article Id to a project level property
+	testRunner.testCase.testSuite.project.setPropertyValue("articleId", articleId_List[j] )
+	
+	article_testsuite=project.getTestSuiteByName("TS_Article")
+	article_testcase=article_testsuite.getTestCaseByName("TC_Article_Details")
+	
+
+	//running article request
+	article_testcase.run(new com.eviware.soapui.support.types.StringToObjectMap(),false);
+
+	//response of article request
+	def articleResponse=project.testSuites["TS_Article"].testCases["TC_Article_Details"].testSteps["Rq_Article_Details"].testRequest.response.responseContent
+	def articleResponseHeaders=project.testSuites["TS_Article"].testCases["TC_Article_Details"].testSteps["Rq_Article_Details"].testRequest.response.responseHeaders
+	def articleJson = slurper.parseText articleResponse
+	log.info "article data"+articleJson.data
+
+	log.info "article ID for which the request send is"+ articleId_List[0]
+	
+	//checking the status of the article ID request
+	assert articleJson.status.code == "200"
+	
+	// Assert article request response headers
+	assert articleResponseHeaders["Content-Type"].toString() == "[application/json]"
+	log.info "article response headers content type is"+articleResponseHeaders["Content-Type"]
+	assert articleResponseHeaders["Content-Length"].toString() !=null
+	log.info "article response header content lenght"+articleResponseHeaders["Content-Length"]
+
+	assert articleJson.data.title !=null
+	assert articleJson.data.short_description !=null
+	assert articleJson.data.web_url!=null
+	assert articleJson.data.tiny_web_url!=null
+
+     // Assert all the URL's Response
+
+	imageURLs = articleJson.data.media
+	
+	log.info "image urls under article ID request is"+imageURLs
+			
+			for(def iterator in imageURLs)
+			{
+				if(iterator.key!="caption" && iterator.key!="copyright")
+				{
+					if(iterator.value != "")
+					{
+						assert iterator.value !=null
+						URL u = new URL(iterator.value)
+						HttpURLConnection huc = (HttpURLConnection) u.openConnection()
+						huc.setRequestMethod("HEAD")
+					    	huc.connect()
+					    	log.info iterator.value +" response code is"+huc.getResponseCode()
+					    	assert huc.getResponseCode() == 200
+					}
+				}
+			}
+
+}
+
+
+}
+
+
+
+]]></script></con:config></con:testStep><con:properties><con:property><con:name>ID</con:name><con:value>44</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>Local</con:name><con:value>True</con:value></con:property><con:property><con:name>liveTV</con:name><con:value>True</con:value></con:property><con:property><con:name>TOD</con:name><con:value>True</con:value></con:property><con:property><con:name>liveRadio</con:name><con:value>True</con:value></con:property><con:property><con:name>ROD</con:name><con:value>True</con:value></con:property><con:property><con:name>More ABC</con:name><con:value>True</con:value></con:property><con:property><con:name>Settings</con:name><con:value>True</con:value></con:property></con:properties></con:testSuite><con:requirements/><con:properties><con:property><con:name>Current_ID</con:name><con:value>1</con:value></con:property><con:property><con:name>HostName</con:name><con:value>mobileapi.abc-host.net.au</con:value></con:property><con:property><con:name>Results_Folder</con:name><con:value/></con:property><con:property><con:name>Current_filename</con:name><con:value>ID_1_27_8_116_145443.txt</con:value></con:property><con:property><con:name>Current_Article_ID</con:name><con:value>7262898</con:value></con:property><con:property><con:name>Current_suburb</con:name><con:value>sydney</con:value></con:property><con:property><con:name>Current_State</con:name><con:value>NSW</con:value></con:property><con:property><con:name>Current_weathertown</con:name><con:value>sydney</con:value></con:property><con:property><con:name>id</con:name><con:value>16</con:value></con:property><con:property><con:name>articleId</con:name><con:value>4544625</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/></con:soapui-project>

@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  
+//
+//  Created by Swathi Gunuputi on 13/02/2017.
+//
+//
+
+DEVELOPMENT_TEAM = 44RKMR9792
+CODE_SIGN_IDENTITY = iPhone Developer
+
